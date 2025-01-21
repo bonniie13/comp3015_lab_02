@@ -82,7 +82,8 @@ class Book implements JsonSerializable
      */
     public function fill(array $bookData): Book
     {
-        foreach ($bookData as $key => $value) {
+        foreach ($bookData as $key => $value)
+        {
             $this->$key = $value; // dynamically add properties to the Book object
         }
         return $this;
