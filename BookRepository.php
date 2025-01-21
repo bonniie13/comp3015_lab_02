@@ -20,7 +20,8 @@ class BookRepository
     public function getAllBooks(): array
     {
         // If the file doesn't exist, we have no books to read!
-        if (!file_exists($this->filename)) {
+        if (!file_exists($this->filename))
+        {
             return [];
         }
 
@@ -39,7 +40,8 @@ class BookRepository
 
         // Create an empty list and fill the Book objects with the JSON
         $books = [];
-        foreach ($decodedBooks as $bookData) {
+        foreach ($decodedBooks as $bookData)
+        {
             $books[] = (new Book())->fill($bookData);
         }
 
